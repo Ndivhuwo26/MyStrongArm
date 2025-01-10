@@ -1,0 +1,28 @@
+.navbar {
+    padding: 30px;
+    padding-inline: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.link ul{
+    display: flex;
+    gap: 20px;
+}
+.link ul li{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.nav_icon_wrapper{
+    display: flex;
+
+}
+.nav_icon{
+font-size: 32px;
+margin-left: 34px;
+    
+}
+.nav_cart{
+    display: flex;
+    position: relative;
+}
