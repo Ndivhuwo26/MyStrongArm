@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { BiCart, BiUser } from 'react-icons/bi';
 import './Navbar.css';
 import { Link } from 'react-router-dom'; // this will use the link
+import {ShopContext} from '../ShopContext/ShopContext'
 
 export const Navbar = () => {
+  const {itemAmount} = useContext(ShopContext)
   return (
     <div>
       <div className="navbar">
@@ -22,7 +24,7 @@ export const Navbar = () => {
           <Link to='/cart'>
           <div className="nav_cart">
             <BiCart className="Nav_icon" />
-            <p className="nav_cart_amount">0</p>
+            <p className="nav_cart_amount">{itemAmount}</p>
           </div>
           </Link>
           <BiUser className="Nav_icon" />

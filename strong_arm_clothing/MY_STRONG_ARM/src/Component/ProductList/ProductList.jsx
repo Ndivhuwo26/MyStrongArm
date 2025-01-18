@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'; // this will use the link
 
 
 const ProductList = () => {
-  const { products } = useContext(ShopContext);
+  const { products, addToCart}  = useContext(ShopContext);
 
   return (
     <div>
@@ -18,14 +18,15 @@ const ProductList = () => {
             const { id, brand, name, image, price, rating, category, description } = product;
             return (
               <div className="product_card" key={id}>
-                <Link to={'/product/${product.id}'} key={product.id}>
+                <Link to={`/product/${product.id}`} key={product.id}>
                 <img src={image} alt={name}  className="product-img"/>
                 <div className="product_info">
                   <h4>{name}</h4> {/* Corrected this line to use 'name' */}
                   <p> {price}</p>
                 </div>
                 </Link>
-                <button className="add-to-cart">Add To Cart</button>
+                <button onClick={() => addToCart(product, id)} className="add-to-cart">Add To Cart</button>
+
               </div>
             );
           })}
