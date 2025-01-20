@@ -1,44 +1,114 @@
+/* Base Navbar Styling */
 .navbar {
-    padding: 30px;
-    padding-inline: 80px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
+  padding: 30px;
+  padding-inline: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.5s ease; /* Smooth transition for all properties */
+  z-index: 1000;
 }
-.link ul{
-    display: flex;
-    gap: 20px;
-}
-.link ul li{
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-.nav_icon_wrapper{
-    display: flex;
-    gap: 40px; 
 
+/* Active Navbar Styling */
+.navbar.active {
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.75);
+  transition: all 0.5s ease; /* Smooth transition for active state */
 }
-.nav_icon{
-font-size: 32px;
-margin-left: 36px;
-    
+
+/* Navbar Links */
+.link ul {
+  display: flex;
+  gap: 20px;
 }
-.nav_cart{
-    display: flex;
-    position: relative;
-    cursor: pointer;
+
+.link ul li {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+  cursor: pointer;
 }
-.nav_cart_amount{
-    background-color: skyblue;
-    position: absolute;
-    right: -8px;
-    font-size: 12px;
-    height: 20px;
-    width: 20px;
-    color: whitesmoke;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* Navbar Icon Wrapper */
+.nav_icon_wrapper {
+  display: flex;
+  gap: 40px;
+}
+
+/* Individual Icons */
+.nav_icon {
+  font-size: 32px;
+  margin-left: 36px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Cart Styling */
+.nav_cart {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Cart Amount Bubble */
+.nav_cart_amount {
+  background-color: #1e90ff; /* Sky blue, more vivid */
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  font-size: 12px;
+  height: 20px;
+  width: 20px;
+  color: whitesmoke;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* iPad Mini and Smaller (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    padding-inline: 40px;
+  }
+  .link ul {
+    gap: 10px;
+  }
+  .nav_icon_wrapper {
+    gap: 20px;
+  }
+  .nav_cart_amount {
+    height: 16px;
+    width: 16px;
+    font-size: 10px;
+  }
+}
+
+/* iPhone and Smaller (max-width: 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column; /* Stack navbar */
+    padding: 10px;
+    text-align: center;
+  }
+  .link ul {
+    flex-direction: column; /* Stack links */
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+
+/* iPhone X (Custom Adjustments) */
+@media (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .navbar {
+    padding-top: 40px; /* Account for notch */
+  }
 }

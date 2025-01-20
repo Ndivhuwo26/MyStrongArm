@@ -1,0 +1,64 @@
+.footer{
+  background: #000;
+  color: white;
+  padding: 3rem;
+
+}
+.footer_content{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  border-bottom: 2px solid #666;
+}
+.footer_socials .footer_icon{
+  font-size: 22px;
+  margin-left: 10px;
+  
+}
+.copy{
+  text-align: center;
+  padding: 15px;
+
+}
+
+/* iPad Pro and Smaller (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .footer_content {
+    flex-direction: column; /* Stack footer sections */
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+/* iPad Mini and Smaller (max-width: 768px) */
+@media (max-width: 768px) {
+  .footer_content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .footer_socials {
+    margin-top: 20px;
+  }
+}
+
+/* iPhone and Smaller (max-width: 480px) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px; /* Adjust padding */
+  }
+  .footer_content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .copy {
+    padding: 10px;
+  }
+}
+
+/* iPhone X (Custom Adjustments) */
+@media (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .footer {
+    padding-bottom: 40px; /* Adjust for extra space */
+  }
+}

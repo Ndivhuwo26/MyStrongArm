@@ -5,6 +5,8 @@ import Homepage from './Page/Homepage/Homepage';
 import ShopContextProvider from "./Component/ShopContext/ShopContext";
 import ProductDetails from "./Component/ProductList/ProductList";
 import { Cart } from './Component/Cart/Cart';
+import { Footer } from './Component/Footer/Footer';
+import Contact from './Page/Contact/Contact';
 
 
 const App = () => {
@@ -18,7 +20,9 @@ const App = () => {
         <Route path="/" element={<Homepage />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} /> 
+        <Route path="/Contact" element={<Contact />}   />
       </Routes>
+      <Footer />
     </ShopContextProvider>
   );
 };
