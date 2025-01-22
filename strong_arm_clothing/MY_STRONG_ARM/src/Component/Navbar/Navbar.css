@@ -74,41 +74,26 @@
   align-items: center;
 }
 
-/* iPad Mini and Smaller (max-width: 768px) */
+
+
+/* Navbar adjustments */
 @media (max-width: 768px) {
   .navbar {
-    padding-inline: 40px;
+    padding-inline: 20px; /* Reduced padding for smaller screens */
   }
+
   .link ul {
-    gap: 10px;
+    flex-direction: column; /* Stack navbar links vertically on smaller screens */
+    gap: 15px;
   }
+
   .nav_icon_wrapper {
     gap: 20px;
   }
+
   .nav_cart_amount {
-    height: 16px;
-    width: 16px;
-    font-size: 10px;
-  }
-}
-
-/* iPhone and Smaller (max-width: 480px) */
-@media (max-width: 480px) {
-  .navbar {
-    flex-direction: column; /* Stack navbar */
-    padding: 10px;
-    text-align: center;
-  }
-  .link ul {
-    flex-direction: column; /* Stack links */
-    gap: 10px;
-    margin-top: 10px;
-  }
-}
-
-/* iPhone X (Custom Adjustments) */
-@media (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-  .navbar {
-    padding-top: 40px; /* Account for notch */
+    font-size: 12px;
+    height: 18px;
+    width: 18px;
   }
 }

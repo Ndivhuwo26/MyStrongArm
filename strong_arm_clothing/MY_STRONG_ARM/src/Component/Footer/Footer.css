@@ -1,64 +1,90 @@
-.footer{
-  background: #000;
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
   color: white;
-  padding: 3rem;
-
+  padding: 20px 0;
 }
-.footer_content{
+
+.footer_content {
   display: flex;
   justify-content: space-between;
-  padding: 30px;
-  border-bottom: 2px solid #666;
+  width: 80%;
 }
-.footer_socials .footer_icon{
-  font-size: 22px;
-  margin-left: 10px;
-  
+
+.footer_name {
+  flex: 1;
 }
-.copy{
+
+.footer_contact,
+.footer_about,
+.footer_account {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer_icon {
+  margin: 0 10px;
+  font-size: 20px;
+  color: white;
+}
+
+.footer_icon:hover {
+  color: red;
+}
+
+.copy {
   text-align: center;
-  padding: 15px;
-
+  margin-top: 20px;
 }
 
-/* iPad Pro and Smaller (max-width: 1024px) */
-@media (max-width: 1024px) {
-  .footer_content {
-    flex-direction: column; /* Stack footer sections */
-    text-align: center;
-    padding: 20px;
-  }
+a {
+  color: aquamarine;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
 }
 
-/* iPad Mini and Smaller (max-width: 768px) */
+a:hover {
+  color: #a02b2b;
+}
+.footer_logo {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 50%; /* Makes the image round */
+}
+/* Responsive footer adjustments */
 @media (max-width: 768px) {
   .footer_content {
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    width: 100%;
   }
-  .footer_socials {
-    margin-top: 20px;
+
+  .footer_name, .footer_contact, .footer_about, .footer_account {
+    flex: none;
+    padding: 10px 0;
+    text-align: center; /* Center content */
+  }
+
+  .footer_icon {
+    margin: 10px 0; /* Adjust spacing between icons */
+  }
+
+  .footer_logo {
+    width: 100px; /* Reduce logo size on smaller screens */
   }
 }
 
-/* iPhone and Smaller (max-width: 480px) */
+/* Small screen adjustments for mobile */
 @media (max-width: 480px) {
-  .footer {
-    padding: 20px; /* Adjust padding */
-  }
   .footer_content {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
+    width: 100%;
   }
-  .copy {
-    padding: 10px;
-  }
-}
 
-/* iPhone X (Custom Adjustments) */
-@media (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-  .footer {
-    padding-bottom: 40px; /* Adjust for extra space */
+  .footer_icon {
+    font-size: 18px; /* Smaller icons on mobile */
   }
 }

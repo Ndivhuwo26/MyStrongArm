@@ -37,22 +37,27 @@ export const Navbar = () => {
               <Link to="/product">Product</Link>
             </li>
             <li>
-              <Link to="/NewArrivals">New Arrivals</Link>
+              <Link to="/NewArrivals">coming Soon</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>
             </li>
+            <li>
+          <Link to="/login">Login</Link>
+        </li>
           </ul>
         </div>
         <div className="nav_icon_wrapper">
-          <Link to="/cart">
-            <div className="nav_cart">
-              <BiCart className="Nav_icon" />
-              <p className="nav_cart_amount">{itemAmount}</p>
-            </div>
-          </Link>
-          <BiUser className="Nav_icon" />
-        </div>
+      <Link to="/cart">
+    <div className="nav_cart">
+    <BiCart className="Nav_icon" />
+      <p className="nav_cart_amount">{itemAmount}</p>
+    </div>
+    </Link>
+    <Link to="/login">
+    <BiUser className="Nav_icon" />
+    </Link>
+    </div>
       </div>
     </div>
   );

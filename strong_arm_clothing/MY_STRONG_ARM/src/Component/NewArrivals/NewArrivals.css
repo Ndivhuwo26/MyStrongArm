@@ -1,0 +1,29 @@
+import React from 'react';
+import './NewArrivals.css';  // Ensure to import the CSS
+
+const NewArrivals = () => {
+  return (
+    <div className="banner">
+      <div className="slider" style={{ '--quantity': 10 }}>
+        <div className="item" style={{ '--position': 1 }}>
+          <img src="img/sneakers/fa3d6a5a89cb4ccfbfd5cb9864455cbe.jpg" alt="Sneaker 1" />
+        </div>
+        <div className="item" style={{ '--position': 2 }}>
+          <img src="img/sneakers/adidas_low_cut_sport.jpg" alt="Sneaker 2" />
+        </div>
+        {/* Add the other items similarly */}
+      </div>
+      <div className="content">
+        <h1>ARRIVALS !!</h1>
+        <div className="author">
+          <h2>Get Them As They Arrive @</h2>
+          <p><b>My Strong Arm</b></p>
+          <p>With unbeatable prices and deals, hurry while stock lasts!</p>
+        </div>
+        <div className="model"></div>
+      </div>
+    </div>
+  );
+};
+
+export default NewArrivals;

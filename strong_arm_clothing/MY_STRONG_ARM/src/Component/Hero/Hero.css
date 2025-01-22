@@ -63,70 +63,32 @@ font-size: 22px;
     color: gray;
 }
 
-
-/* iPad Pro and Smaller (max-width: 1024px) */
-@media (max-width: 1024px) {
-    .hero_top {
-      flex-direction: column; /* Stack hero sections */
-      padding-inline: 50px;
-    }
-    .hero_right img {
-      width: 100%; /* Scale image width */
-      height: auto; /* Maintain aspect ratio */
-    }
-    .hero_left h1 {
-      font-size: 3.5rem; /* Adjust heading sizes */
-    }
-    .hero_left h2 {
-      font-size: 28px;
-    }
-  }
-  
-  /* iPad Mini and Smaller (max-width: 768px) */
-  @media (max-width: 768px) {
-    .hero_top {
-      padding-inline: 30px;
-      text-align: center; /* Center-align hero text */
-    }
-    .hero_left h1 {
-      font-size: 2.8rem; /* Reduce heading size */
-    }
-    .hero_left p {
-      font-size: 12px; /* Adjust paragraph font size */
-    }
-    .hero_bottom {
-      flex-direction: column; /* Stack bottom content */
-      margin-left: 0;
-      width: auto; /* Full width */
-    }
-  }
-  
-  /* iPhone and Smaller (max-width: 480px) */
-  @media (max-width: 480px) {
+/* Hero section adjustments */
+@media (max-width: 768px) {
     .hero_top {
       flex-direction: column;
-      gap: 15px;
-      padding-inline: 10px;
+      padding-inline: 20px;
+      gap: 10px;
     }
-    .hero_left h1 {
-      font-size: 2rem; /* Reduce heading size */
+  
+    .hero_left {
+      max-width: 100%;
+      text-align: center; /* Center text in smaller screens */
     }
-    .hero_left h2 {
-      font-size: 20px;
-    }
+  
     .hero_right img {
       width: 100%;
-      height: auto;
+      height: auto; /* Ensure image fits */
+      object-fit: cover; /* Maintain aspect ratio */
     }
-    .hero_bottom {
-      margin-top: 20px;
-      padding: 10px;
-    }
-  }
   
-  /* iPhone X (Custom Adjustments) */
-  @media (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-    .hero_top {
-      padding-top: 30px;
+    .hero_bottom {
+      margin-left: 0; /* Remove left margin */
+      width: 100%;
+    }
+  
+    .hero_content {
+      flex-direction: column;
+      align-items: center;
     }
   }

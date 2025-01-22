@@ -59,47 +59,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <footer className="section-p1">
-        <div className="col">
-          <h4>Contact</h4>
-          <p><strong>Address:</strong> 34 Kempton Park, 1678 Street, 32 South Africa</p>
-          <p><strong>Phone:</strong> 011 2323 567 / 0790765431</p>
-          <p><strong>Hours:</strong> 10:00am - 17:00pm (Mon - Fri)</p>
-          <div className="follow">
-            <h4>Follow us</h4>
-            <div className="icon">
-              <i className="fab fa-facebook-f"></i>
-              <i className="fab fa-twitter"></i>
-              <i className="fab fa-instagram"></i>
-              <i className="fab fa-pinterest-p"></i>
-            </div>
-          </div>
-        </div>
 
-        <div className="col">
-          <h3>About</h3>
-          <a href="#">About Us</a>
-          <a href="#">Delivery Information</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Contact Us</a>
-        </div>
-
-        <div className="col">
-          <h3>My Account</h3>
-          <a href="#">Sign In</a>
-          <a href="#">View Cart</a>
-          <a href="#">My Wishlist</a>
-          <a href="#">Track My Order</a>
-          <a href="#">Help</a>
-        </div>
-
-  
-
-        <div className="Copyright">
-          <p>All rights reserved 2024, Sabimaru Devo - E-commerce Store</p>
-        </div>
-      </footer>
     </div>
   );
 };

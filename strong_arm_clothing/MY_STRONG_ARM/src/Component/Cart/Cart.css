@@ -116,54 +116,80 @@ font-size: 18px;
     margin: 5px 0;
     font-size: larger;
 }
-
-/* iPad Pro and Smaller (max-width: 1024px) */
-@media (max-width: 1024px) {
-    .cart_container {
-      flex-direction: column; /* Stack cart items vertically */
-      padding: 15px;
-    }
-    .cart_left,
-    .cart_right {
-      width: 100%; /* Full width for both sections */
-      margin-bottom: 20px; /* Add spacing between sections */
-    }
+.empty-cart-message {
+    text-align: center;
+    padding: 20px;
+    color: #333;
   }
   
-  /* iPad Mini and Smaller (max-width: 768px) */
-  @media (max-width: 768px) {
+  .empty-cart-icon {
+    width: 50px; /* Adjust the size of the icon */
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .empty-cart-message p {
+    font-size: 18px;
+    color: gray;
+  }
+  
+
+/* Responsive adjustments for cart page */
+@media (max-width: 768px) {
     .cart_container {
-      flex-direction: column; /* Stack items */
+      flex-direction: column; /* Stack left and right sections */
       padding: 10px;
     }
-    .cart_left,
-    .cart_right {
-      width: 100%; /* Use full width */
-      margin-bottom: 15px;
+  
+    .cart_left, .cart_right {
+      width: 100%; /* Take full width on smaller screens */
+      margin-bottom: 20px;
     }
+  
+    .cart_header {
+      font-size: 16px; /* Smaller font for headers */
+    }
+  
+    .cart_item {
+      flex-direction: column; /* Stack product details vertically */
+      align-items: flex-start;
+    }
+  
     .product_details {
-      flex-direction: column; /* Stack product details */
-      max-width: 100%; /* Full width for smaller screens */
+      flex-direction: column;
+      align-items: flex-start;
     }
+  
     .product_details img {
-      margin-bottom: 10px; /* Add spacing below image */
+      margin-right: 0; /* Remove margin */
+    }
+  
+    .quanity {
+      flex-direction: row; /* Align quantity buttons horizontally */
+      gap: 5px;
+    }
+  
+    .price, .total {
+      font-size: 14px; /* Smaller price font */
+    }
+  
+    .summary_item {
+      font-size: 14px; /* Smaller font for summary items */
     }
   }
   
-  /* iPhone and Smaller (max-width: 480px) */
+  /* Responsive adjustments for small screens (mobile) */
   @media (max-width: 480px) {
     .cart_container {
+      padding: 5px;
+    }
+  
+    .cart_left, .cart_right {
       padding: 10px;
     }
-    .cart_left h3 {
-      font-size: 16px; /* Smaller headings */
-    }
-    .cart_right h2 {
-      font-size: 18px; /* Adjust summary heading */
-    }
-    .quanity button,
-    .apply_btn,
+  
     .checkout_btn {
-      font-size: 14px; /* Reduce button text size */
+      font-size: 14px; /* Smaller font for checkout button */
     }
   }
+  
