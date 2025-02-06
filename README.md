@@ -1,1 +1,2 @@
- pleaes cd into mystrongarm
+ please
+ cd into mystrongarm
